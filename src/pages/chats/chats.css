@@ -1,0 +1,27 @@
+.error-page_code {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 144px;
+    color: $black_color;
+}
+
+.error-page_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: $black_color;
+}
+
+.error-page_img {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    img {
+        height: 211px;
+        width: 202px;
+    }
+}
