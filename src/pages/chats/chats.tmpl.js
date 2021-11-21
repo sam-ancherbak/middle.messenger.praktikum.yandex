@@ -1,4 +1,4 @@
-export const changePictureTemplate = `
+export const chatsTemplate = `
 <div id="root">
     <div class="content-container">
         <div class="centered-container">
