@@ -4,11 +4,13 @@ import {chatsTemplate} from "./chats.tmpl.js"
 import '../../styles/global_styles.css';
 import './chats.css';
 
-import errorImageUrl from '../../../static/img/pepe_500.png';
+import searchIcon from '../../../static/icons/search_icon.svg';
+import actionsIcon from '../../../static/icons/actions_icon.svg';
 
 const data = {
-    errorImageUrl: errorImageUrl
-};
+    searchIcon: searchIcon,
+    actionsIcon: actionsIcon,
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     document.body.innerHTML = Handlebars.compile(chatsTemplate)(data);
