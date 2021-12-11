@@ -7,30 +7,30 @@ export const registerTemplate = `
                     <span>Регистрация</span>
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="email" placeholder="Введите почту">
+                    {{{emailInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="login" placeholder="Введите логин">
+                    {{{loginInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="first_name" placeholder="Введите Имя">
+                    {{{firstNameInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="second_name" placeholder="Введите Фамилию">
+                    {{{secondNameInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="phone" placeholder="Введите номер">
+                    {{{phoneInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="password" name="password" placeholder="Введите пароль">
+                    {{{passwordInput}}}
                     <img class="form_input-icon" src="{{eyeIcon}}"/>
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="password" name="repeat_password" placeholder="Повторите пароль">
+                    {{{repeatPasswordInput}}}
                     <img class="form_input-icon" src="{{eyeIcon}}"/>
                 </div>
                 <div class="form_element-wrapper">
-                    <button class="form_button form_button_disabled" type="submit">Зарегистрироваться</button>
+                    {{{registerButton}}}
                 </div>
                 <div class="form_element-wrapper">
                     <a href="/" class="form_link">Войти</a>
