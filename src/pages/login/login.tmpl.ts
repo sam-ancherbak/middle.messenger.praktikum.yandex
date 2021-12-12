@@ -7,14 +7,14 @@ export const loginTemplate: string = `
                     <span>Вход</span>
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="text" name="login" placeholder="Введите логин">
+                    {{{loginInput}}}
                 </div>
                 <div class="form_element-wrapper">
-                    <input class="form_input" type="password" name="password" placeholder="Введите пароль">
+                    {{{passwordInput}}}
                     <img class="form_input-icon" src="{{eyeIcon}}"/>
                 </div>
                 <div class="form_element-wrapper">
-                    <button class="form_button" type="submit">Вход</button>
+                    {{{loginButton}}}
                 </div>
             </form>
         </div>
