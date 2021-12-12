@@ -1,0 +1,25 @@
+.chat-message {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 12px 10px;
+    align-items: center;
+    width: fit-content;
+    max-width: 425px;
+    min-height: 38px;
+    border-radius: 10px;
+    background-color: #FFF2F2;
+    span:nth-of-type(1) {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    span:nth-of-type(2) {
+        margin-left: 10px;
+        font-size: 8px;
+        line-height: 9px;
+    }
+}
+.chat-message_right {
+    align-self: flex-end;
+}

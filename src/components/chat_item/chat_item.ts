@@ -1,5 +1,6 @@
 import chatItemTemplate from "./chat_item.tmpl";
 import Block from "../../modules/block";
+import './chat_item.css';
 
 interface chatItemProps {
     author: string;
