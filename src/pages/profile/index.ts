@@ -43,7 +43,7 @@ let profilePage = new class Profile extends Block {
                 class: 'form_input',
                 type: 'text',
                 name: 'login',
-                placeholder: 'Никнейм'
+                placeholder: 'Логин'
             }),
             phoneInput: new Input({
                 class: 'form_input',

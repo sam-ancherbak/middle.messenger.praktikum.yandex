@@ -1,4 +1,4 @@
-export const loginTemplate = `
+export const loginTemplate: string = `
 <div id="root">
     <div class="centered-container">
         <div class="form">
