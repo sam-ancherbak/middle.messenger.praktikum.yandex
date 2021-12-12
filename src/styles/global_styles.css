@@ -1,20 +1,22 @@
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: $black_color;
+  font-family: Roboto, sans-serif;
+  color: $black_color;
 }
 
 .content-container {
-    display: flex;
+  display: flex;
 }
 
 .centered-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

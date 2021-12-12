@@ -1,17 +1,17 @@
 .form {
-    .form_header {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-        font-size: 24px;
-        font-weight: 500;
-    }
+  .form_header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 500;
+  }
 
-    .form_element-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-        position: relative;
-    }
+  .form_element-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
 }

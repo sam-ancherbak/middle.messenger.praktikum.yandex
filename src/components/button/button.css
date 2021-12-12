@@ -1,15 +1,15 @@
 .form_button {
-    width: 334px;
-    height: 50px;
-    margin-top: 20px;
-    background: $red_color;
-    border: 1px solid $grey_color;
-    border-radius: 5px;
-    font-size: 14px;
-    color: $white_color;
-    font-weight: bold;
+  width: 334px;
+  height: 50px;
+  margin-top: 20px;
+  background: $red_color;
+  border: 1px solid $grey_color;
+  border-radius: 5px;
+  font-size: 14px;
+  color: $white_color;
+  font-weight: bold;
 }
 
 .form_button_disabled {
-    background: $light_red_color;
+  background: $light_red_color;
 }
