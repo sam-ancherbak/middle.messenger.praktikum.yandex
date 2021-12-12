@@ -7,8 +7,7 @@ import { loginTemplate } from './login.tmpl';
 import '../../styles/global_styles.css';
 import './login.css';
 
-import eyeIcon from '../../../static/icons/password_eye.svg';
-import { focusOutValidation, submitEventValidation, valdiateInput } from '../../modules/input-validator';
+import { focusOutValidation, submitEventValidation } from '../../modules/input-validator';
 
 class Login extends Block {
   constructor() {
@@ -31,8 +30,8 @@ class Login extends Block {
         type: 'submit',
       }),
       eventsList: {
-        focusout: (event) => focusOutValidation(event),
-        submit: (event) => submitEventValidation(event),
+        focusout: (event: Event) => focusOutValidation(event),
+        submit: (event: Event) => submitEventValidation(event),
       },
     });
   }

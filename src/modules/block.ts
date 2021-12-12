@@ -1,6 +1,5 @@
 import * as Handlebars from 'handlebars';
 import EventBus from './event-bus';
-import Input from '../components/input/input';
 
 export default class Block {
   static EVENTS = {
@@ -33,7 +32,7 @@ export default class Block {
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  _registerEvents(eventBus) {
+  _registerEvents(eventBus: EventBus) {
     eventBus.on(Block.EVENTS.INIT, this._componentInit.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
     eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
@@ -65,7 +64,7 @@ export default class Block {
     return this._element;
   }
 
-  _makePropsProxy(props) {
+  _makePropsProxy(props: { [key: string]: any }) {
     return new Proxy(props, {
       get(target: { [key: string]: any }, prop: string) {
         if (prop.indexOf('_') === 0) {
@@ -103,7 +102,7 @@ export default class Block {
   componentDidMount() {
   }
 
-  _componentDidUpdate(oldProps, newProps) {
+  _componentDidUpdate(oldProps: { [key: string]: any }, newProps: { [key: string]: any }) {
     const response = this._componentShouldBeUpdated(oldProps, newProps);
 
     if (response) {

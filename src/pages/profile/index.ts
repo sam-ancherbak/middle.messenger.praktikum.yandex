@@ -8,7 +8,6 @@ import { profileTemplate } from './profile.tmpl';
 import '../../styles/global_styles.css';
 import './profile.css';
 
-import backIcon from '../../../static/icons/back_icon.svg';
 import { focusOutValidation, submitEventValidation } from '../../modules/input-validator';
 
 class Profile extends Block {
@@ -56,8 +55,8 @@ class Profile extends Block {
         type: 'submit',
       }),
       eventsList: {
-        focusout: (event) => focusOutValidation(event),
-        submit: (event) => submitEventValidation(event),
+        focusout: (event: Event) => focusOutValidation(event),
+        submit: (event: Event) => submitEventValidation(event),
       },
     });
   }

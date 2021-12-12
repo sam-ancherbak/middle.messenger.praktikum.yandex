@@ -7,12 +7,10 @@ import '../../styles/global_styles.css';
 import './register.css';
 
 import eyeIcon from '../../../static/icons/password_eye.svg';
-import { template } from 'handlebars';
 import Input from '../../components/input/input';
 import {
   focusOutValidation,
   submitEventValidation,
-  valdiateInput,
 } from '../../modules/input-validator';
 
 class Register extends Block {
@@ -67,8 +65,8 @@ class Register extends Block {
       }),
       eyeIcon,
       eventsList: {
-        focusout: (event) => focusOutValidation(event),
-        submit: (event) => [submitEventValidation(event), this.prepareForm(event)],
+        focusout: (event: Event) => focusOutValidation(event),
+        submit: (event: Event) => [submitEventValidation(event), this.prepareForm(event)],
       },
     });
   }
@@ -80,7 +78,7 @@ class Register extends Block {
     if (notValidInputs.length > 0) {
       return;
     }
-    const formObject = {};
+    const formObject: {[key: string]: string} = {};
     const inputs: HTMLCollectionOf<HTMLInputElement> = target.getElementsByTagName('input');
     Object.values(inputs)
       .forEach((input) => {

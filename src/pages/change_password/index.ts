@@ -34,8 +34,8 @@ class ChangePassword extends Block {
       eyeIcon,
       backIcon,
       eventsList: {
-        focusout: (event) => focusOutValidation(event),
-        submit: (event) => submitEventValidation(event),
+        focusout: (event: Event) => focusOutValidation(event),
+        submit: (event: Event) => submitEventValidation(event),
       },
     });
   }

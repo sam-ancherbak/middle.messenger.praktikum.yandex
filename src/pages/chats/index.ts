@@ -30,6 +30,8 @@ class Chats extends Block {
         time: '18:21',
         counter: 3,
       }),
+      searchIcon: searchIcon,
+      actionsIcon: actionsIcon
     });
   }
 
