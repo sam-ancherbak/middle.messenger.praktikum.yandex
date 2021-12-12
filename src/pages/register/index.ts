@@ -57,7 +57,7 @@ let registerPage = new class Register extends Block {
             }),
             registerButton: new Button({
                 text: 'Зарегестрироваться',
-                class: 'form_button form_button_disabled',
+                class: 'form_button',
                 type: 'submit'
             }),
             eyeIcon: eyeIcon,

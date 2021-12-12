@@ -8,5 +8,6 @@
     "strictNullChecks": true,
     "sourceMap": true
   },
-  "include": ["./src/", "./custom.d.ts"]
+  "include": ["./src/", "./custom.d.ts"],
+  "exclude": ["node_modules"]
 }

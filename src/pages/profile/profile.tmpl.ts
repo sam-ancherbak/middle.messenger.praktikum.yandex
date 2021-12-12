@@ -1,4 +1,4 @@
-export const profileTemplate = `
+export const profileTemplate: string = `
 <div id="root">
     <div class="content-container">
         <div class="side-menu">
@@ -15,25 +15,25 @@ export const profileTemplate = `
                         </a>
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="email" placeholder="Почта">
+                        {{{emailInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="login" placeholder="Логин">
+                        {{{loginInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="first_name" placeholder="Имя">
+                        {{{firstNameInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="second_name" placeholder="Фамилия">
+                        {{{secondNameInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="display_name" placeholder="Никнейм">
+                        {{{displayNameInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="text" name="phone" placeholder="Номер">
+                        {{{phoneInput}}}
                     </div>
                     <div class="form_element-wrapper">
-                        <button class="form_button form_button_disabled" type="submit">Сохранить изменения</button>
+                        {{{saveButton}}}
                     </div>
                     <div class="form_element-wrapper">
                         <a href="../change_password/change_password.html" class="form_link form_link_black">Изменить пароль</a>
