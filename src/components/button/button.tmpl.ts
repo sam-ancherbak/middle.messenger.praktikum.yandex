@@ -1,5 +1,11 @@
 const buttonTemplate: string = `
-    <button class='{{class}}' type='{{type}}'>{{text}}</button>
+    <button 
+        class='{{class}}'
+        {{#if type}}
+            type='{{type}}'
+        {{/if}}>
+        {{text}}
+        </button>
 `
 
 export default buttonTemplate;

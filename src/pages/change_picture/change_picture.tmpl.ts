@@ -1,4 +1,4 @@
-export const changePictureTemplate = `
+export const changePictureTemplate: string = `
 <div id="root">
     <div class="content-container">
         <div class="side-menu">
@@ -16,7 +16,7 @@ export const changePictureTemplate = `
                         </div>
                     </div>
                     <div class="form_element-wrapper">
-                        <button name="avatar" class="form_button">Выберите файл</button>
+                        {{{button}}}
                     </div>
                 </form>
             </div>
