@@ -67,7 +67,7 @@ let registerPage = new class Register extends Block {
     render() {
         const registerTmpl = Handlebars.compile(registerTemplate);
         return registerTmpl({
-                eyeIcon: eyeIcon,
+                eyeIcon: this.props.eyeIcon,
                 emailInput: this.props.emailInput.render(),
                 loginInput: this.props.loginInput.render(),
                 firstNameInput: this.props.firstNameInput.render(),

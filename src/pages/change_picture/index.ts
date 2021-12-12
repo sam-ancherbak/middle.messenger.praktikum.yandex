@@ -22,7 +22,8 @@ let changePicturePage = new class ChangePicture extends Block {
     render() {
         let changePictureTmpl = Handlebars.compile(changePictureTemplate)
         return changePictureTmpl({
-            button: this.props.button.render()
+            button: this.props.button.render(),
+            backIcon: this.props.backIcon,
         })
     }
 }

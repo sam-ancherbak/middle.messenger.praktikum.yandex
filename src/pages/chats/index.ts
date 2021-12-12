@@ -39,6 +39,8 @@ let chatsPage = new class Chats extends Block {
             chatMessageLeft: this.props.chatMessageLeft.render(),
             chatMessageRight: this.props.chatMessageRight.render(),
             chatItem: this.props.chatItem.render(),
+            searchIcon: this.props.searchIcon,
+            actionsIcon: this.props.actionsIcon,
         })
     }
 }

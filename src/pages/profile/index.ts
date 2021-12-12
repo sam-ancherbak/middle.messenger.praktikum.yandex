@@ -10,8 +10,6 @@ import './profile.css';
 
 import backIcon from '../../../static/icons/back_icon.svg';
 
-
-
 let profilePage = new class Profile extends Block {
     constructor() {
         super('div', {
@@ -62,7 +60,7 @@ let profilePage = new class Profile extends Block {
     render() {
         const profileTmpl = Handlebars.compile(profileTemplate);
         return profileTmpl({
-                backIcon: backIcon,
+                backIcon: this.props.backIcon,
                 emailInput: this.props.emailInput.render(),
                 loginInput: this.props.loginInput.render(),
                 firstNameInput: this.props.firstNameInput.render(),

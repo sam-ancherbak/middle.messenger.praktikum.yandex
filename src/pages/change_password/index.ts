@@ -10,11 +10,6 @@ import Block from "../../modules/block";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 
-const data = {
-    eyeIcon: eyeIcon,
-    backIcon: backIcon
-}
-
 let changePasswordPage = new class ChangePassword extends Block {
     constructor() {
         super('div', {
@@ -45,7 +40,9 @@ let changePasswordPage = new class ChangePassword extends Block {
         return changePasswordTmpl({
             passwordInput: this.props.passwordInput.render(),
             repeatPasswordInput: this.props.repeatPasswordInput.render(),
-            saveButton: this.props.saveButton.render()
+            saveButton: this.props.saveButton.render(),
+            eyeIcon: this.props.eyeIcon,
+            backIcon: this.props.backIcon
         })
     }
 }

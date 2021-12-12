@@ -11,17 +11,14 @@ export const changePasswordTemplate: string = `
                 <form action="/" method="post">
                     <div class="form_element-wrapper">
                         {{{passwordInput}}}
-<!--                        <input class="form_input" type="password" name="oldPassword" placeholder="Введите текущий пароль">-->
                         <img class="form_input-icon" src="{{eyeIcon}}"/>
                     </div>
                     <div class="form_element-wrapper">
                         {{{repeatPasswordInput}}}
-<!--                        <input class="form_input" type="password" name="newPassword" placeholder="Введите новый пароль">-->
                         <img class="form_input-icon" src="{{eyeIcon}}"/>
                     </div>
                     <div class="form_element-wrapper">
                         {{{saveButton}}}
-<!--                        <button class="form_button form_button_disabled" type="submit">Сохранить новый пароль</button>-->
                     </div>
                 </form>
 

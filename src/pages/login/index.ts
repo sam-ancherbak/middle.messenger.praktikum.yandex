@@ -37,6 +37,7 @@ let loginPage = new class Login extends Block {
             loginInput: this.props.loginInput.render(),
             passwordInput: this.props.passwordInput.render(),
             loginButton: this.props.loginButton.render(),
+            eyeIcon: this.props.eyeIcon,
         })
     }
 }
