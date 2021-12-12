@@ -53,6 +53,7 @@ export default class HTTPTransport {
             if (method === METHODS.GET || !data) {
                 xhr.send();
             } else {
+                // @ts-ignore
                 xhr.send(data);
             }
         });
