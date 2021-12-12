@@ -9,6 +9,7 @@ import '../../styles/global_styles.css';
 import './profile.css';
 
 import backIcon from '../../../static/icons/back_icon.svg';
+import {focusOutValidation, submitEventValidation} from "../../modules/input-validator";
 
 class Profile extends Block {
     constructor() {
@@ -54,6 +55,10 @@ class Profile extends Block {
                 class: 'form_button',
                 type: 'submit'
             }),
+            eventsList: {
+                focusout: (event) => focusOutValidation(event),
+                submit: (event) => submitEventValidation(event),
+            },
         });
     }
 

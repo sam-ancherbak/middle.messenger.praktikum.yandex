@@ -9,6 +9,7 @@ import backIcon from '../../../static/icons/back_icon.svg';
 import Block from "../../modules/block";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
+import {focusOutValidation, submitEventValidation} from "../../modules/input-validator";
 
 class ChangePassword extends Block {
     constructor() {
@@ -31,7 +32,11 @@ class ChangePassword extends Block {
                 type: 'submit'
             }),
             eyeIcon: eyeIcon,
-            backIcon: backIcon
+            backIcon: backIcon,
+            eventsList: {
+                focusout: (event) => focusOutValidation(event),
+                submit: (event) => submitEventValidation(event),
+            },
         });
     }
 

@@ -8,6 +8,7 @@ import '../../styles/global_styles.css';
 import './login.css';
 
 import eyeIcon from '../../../static/icons/password_eye.svg';
+import {focusOutValidation, submitEventValidation, valdiateInput} from "../../modules/input-validator";
 
 class Login extends Block {
     constructor() {
@@ -29,15 +30,20 @@ class Login extends Block {
                 class: 'form_button',
                 type: 'submit'
             }),
+            eventsList: {
+                focusout: (event) => focusOutValidation(event),
+                submit: (event) => submitEventValidation(event),
+            },
         });
     }
+
     render() {
         let loginTmpl = Handlebars.compile(loginTemplate);
         return loginTmpl({
             loginInput: this.props.loginInput.render(),
             passwordInput: this.props.passwordInput.render(),
             loginButton: this.props.loginButton.render(),
-            eyeIcon: this.props.eyeIcon,
+            eyeIcon: this.props.eyeIcon
         })
     }
 }

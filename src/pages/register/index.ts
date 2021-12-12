@@ -9,7 +9,7 @@ import './register.css';
 import eyeIcon from '../../../static/icons/password_eye.svg';
 import {template} from "handlebars";
 import Input from "../../components/input/input";
-import {valdiateInput} from "../../modules/input-validator";
+import {focusOutValidation, submitEventValidation, valdiateInput} from "../../modules/input-validator";
 
 class Register extends Block {
     constructor() {
@@ -63,9 +63,25 @@ class Register extends Block {
             }),
             eyeIcon: eyeIcon,
             eventsList: {
-                focusout: (event) => this.mouseOverEvent(event),
+                focusout: (event) => focusOutValidation(event),
+                submit: (event) => [submitEventValidation(event), this.prepareForm(event)]
             },
         });
+    }
+
+    prepareForm(event: Event) {
+        event.preventDefault();
+        const target = event.target as HTMLElement;
+        const notValidInputs: HTMLCollectionOf<Element> = target.getElementsByClassName('form_input_error')
+        if (notValidInputs.length > 0) {
+            return;
+        }
+        let formObject = {};
+        const inputs: HTMLCollectionOf<HTMLInputElement> = target.getElementsByTagName('input');
+        Object.values(inputs).forEach(input => {
+            formObject[input.name] = input.value;
+        });
+        console.log(formObject);
     }
 
     render() {
@@ -84,13 +100,6 @@ class Register extends Block {
         )
     }
 
-    mouseOverEvent(event) {
-        const element = event.target;
-        if (element.tagName !== 'INPUT') {
-            return;
-        }
-        valdiateInput(element);
-    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
