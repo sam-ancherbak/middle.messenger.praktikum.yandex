@@ -1,5 +1,6 @@
 import * as Handlebars from "handlebars";
 import EventBus from "./event-bus";
+import Input from "../components/input/input";
 
 export default class Block {
     static EVENTS = {
@@ -45,25 +46,17 @@ export default class Block {
         Object.assign(this.props, nextProps);
     };
 
-    compile(props: object): string {
-        const block = Handlebars.compile(this._meta.template)(props);
-        return block;
-    }
-
     _render() {
-        this._element.innerHTML = this.render();
+        let renderedElement = this.render();
+        this._removeEvents();
+        this._element.innerHTML = renderedElement;
+        this._addEvents();
         this.eventBus().emit(Block.EVENTS.FLOW_CDM);
     }
 
     render() {
-        return this.compile(this.props);
-    }
-
-    _htmlToDocumentFragment(html) {
-        const template = document.createElement("template");
-        const trimHtml = html.trim();
-        template.innerHTML = trimHtml;
-        return template.content;
+        const block = Handlebars.compile(this._meta.template)(this.props);
+        return block;
     }
 
     getContent(): HTMLElement {
@@ -109,14 +102,33 @@ export default class Block {
     }
 
     _componentDidUpdate(oldProps, newProps) {
-        const response = this.componentShouldBeUpdated(oldProps, newProps);
+        const response = this._componentShouldBeUpdated(oldProps, newProps);
 
         if (response) {
             this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
         }
     }
 
-    componentShouldBeUpdated(oldProps: { [key: string]: any }, newProps: { [key: string]: any }) {
+    _componentShouldBeUpdated(oldProps: { [key: string]: any }, newProps: { [key: string]: any }) {
         return oldProps !== newProps;
     }
+
+    _addEvents() {
+        const {eventsList = {}} = this.props;
+        let element = this._element;
+        if (this.constructor.name === 'Input') {
+            element = this._element.querySelector('input') as HTMLElement;
+        }
+        Object.keys(eventsList).forEach(eventName => {
+            element.addEventListener(eventName, eventsList[eventName]);
+        });
+    }
+
+    _removeEvents() {
+        const {eventsList = {}} = this.props;
+        Object.keys(eventsList).forEach(eventName => {
+            this._element.removeEventListener(eventName, eventsList[eventName]);
+        });
+    }
+
 }

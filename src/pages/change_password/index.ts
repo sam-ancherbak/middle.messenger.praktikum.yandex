@@ -10,7 +10,7 @@ import Block from "../../modules/block";
 import Button from "../../components/button/button";
 import Input from "../../components/input/input";
 
-let changePasswordPage = new class ChangePassword extends Block {
+class ChangePassword extends Block {
     constructor() {
         super('div', {
             passwordInput: new Input({
@@ -48,5 +48,5 @@ let changePasswordPage = new class ChangePassword extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = changePasswordPage.render();
+    document.body.appendChild((new ChangePassword()).getContent());
 })

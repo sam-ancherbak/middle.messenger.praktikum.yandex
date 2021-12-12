@@ -9,7 +9,7 @@ import backIcon from "../../../static/icons/back_icon.svg";
 
 import Block from "../../modules/block";
 
-let internalErrorPage = new class InternalError extends Block {
+class InternalError extends Block {
     constructor() {
         super('div', {
             errorImageUrl: errorImageUrl,
@@ -27,5 +27,5 @@ let internalErrorPage = new class InternalError extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = internalErrorPage.render();
+    document.body.appendChild((new InternalError()).getContent());
 })

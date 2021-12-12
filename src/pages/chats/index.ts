@@ -11,7 +11,7 @@ import './chats.css';
 import searchIcon from '../../../static/icons/search_icon.svg';
 import actionsIcon from '../../../static/icons/actions_icon.svg';
 
-let chatsPage = new class Chats extends Block {
+class Chats extends Block {
     constructor() {
         super('div', {
             chatMessageLeft: new ChatMessage({
@@ -46,5 +46,5 @@ let chatsPage = new class Chats extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = chatsPage.render();
+    document.body.appendChild((new Chats()).getContent());
 })

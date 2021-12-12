@@ -8,7 +8,7 @@ import backIcon from '../../../static/icons/back_icon.svg';
 import Button from "../../components/button/button";
 import Block from "../../modules/block";
 
-let changePicturePage = new class ChangePicture extends Block {
+class ChangePicture extends Block {
     constructor() {
         super('div', {
             button: new Button({
@@ -29,5 +29,5 @@ let changePicturePage = new class ChangePicture extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = changePicturePage.render();
+    document.body.appendChild((new ChangePicture()).getContent());
 })

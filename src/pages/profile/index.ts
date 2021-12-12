@@ -10,7 +10,7 @@ import './profile.css';
 
 import backIcon from '../../../static/icons/back_icon.svg';
 
-let profilePage = new class Profile extends Block {
+class Profile extends Block {
     constructor() {
         super('div', {
             emailInput: new Input({
@@ -73,5 +73,5 @@ let profilePage = new class Profile extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = profilePage.render();
+    document.body.appendChild((new Profile()).getContent());
 })

@@ -9,7 +9,7 @@ import backIcon from "../../../static/icons/back_icon.svg";
 import Block from "../../modules/block";
 import {notFoundTemplate} from "./404.tmpl";
 
-let notFoundPage = new class NotFound extends Block {
+class NotFound extends Block {
     constructor() {
         super('div', {
             errorImageUrl: errorImageUrl,
@@ -27,5 +27,5 @@ let notFoundPage = new class NotFound extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = notFoundPage.render();
+    document.body.appendChild((new NotFound()).getContent());
 })

@@ -1,5 +1,6 @@
 import buttonTemplate from "./input.tmpl";
 import Block from "../../modules/block";
+import './input.css';
 
 interface InputProps {
     class: string;

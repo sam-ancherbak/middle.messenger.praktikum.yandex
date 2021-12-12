@@ -9,7 +9,7 @@ import './login.css';
 
 import eyeIcon from '../../../static/icons/password_eye.svg';
 
-let loginPage = new class Login extends Block {
+class Login extends Block {
     constructor() {
         super('div', {
             loginInput: new Input({
@@ -43,5 +43,5 @@ let loginPage = new class Login extends Block {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = loginPage.render();
+    document.body.appendChild((new Login()).getContent());
 })

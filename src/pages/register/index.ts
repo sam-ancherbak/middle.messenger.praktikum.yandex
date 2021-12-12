@@ -9,15 +9,16 @@ import './register.css';
 import eyeIcon from '../../../static/icons/password_eye.svg';
 import {template} from "handlebars";
 import Input from "../../components/input/input";
+import {valdiateInput} from "../../modules/input-validator";
 
-let registerPage = new class Register extends Block {
+class Register extends Block {
     constructor() {
         super('div', {
             emailInput: new Input({
                 class: 'form_input',
                 type: 'text',
                 name: 'email',
-                placeholder: 'Введите почту'
+                placeholder: 'Введите почту',
             }),
             loginInput: new Input({
                 class: 'form_input',
@@ -61,6 +62,9 @@ let registerPage = new class Register extends Block {
                 type: 'submit'
             }),
             eyeIcon: eyeIcon,
+            eventsList: {
+                focusout: (event) => this.mouseOverEvent(event),
+            },
         });
     }
 
@@ -79,8 +83,16 @@ let registerPage = new class Register extends Block {
             }
         )
     }
+
+    mouseOverEvent(event) {
+        const element = event.target;
+        if (element.tagName !== 'INPUT') {
+            return;
+        }
+        valdiateInput(element);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.body.innerHTML = registerPage.render();
+    document.body.appendChild((new Register()).getContent());
 })
