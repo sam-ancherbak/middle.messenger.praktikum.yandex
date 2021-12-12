@@ -1,5 +1,5 @@
-import buttonTemplate from "./button.tmpl";
-import Block from "../../modules/block";
+import buttonTemplate from './button.tmpl';
+import Block from '../../modules/block';
 import './button.css';
 
 interface ButtonProps {
@@ -8,7 +8,7 @@ interface ButtonProps {
     type?: string;
 }
 export default class Button extends Block {
-    constructor(props: ButtonProps) {
-        super(buttonTemplate, props);
-    }
+  constructor(props: ButtonProps) {
+    super(buttonTemplate, props);
+  }
 }

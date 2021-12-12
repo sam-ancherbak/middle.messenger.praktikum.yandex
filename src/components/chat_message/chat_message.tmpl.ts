@@ -3,6 +3,6 @@ const chatMessageTemplate: string = `
         <span>{{text}}</span>
         <span>{{time}}</span>
     </div>
-`
+`;
 
 export default chatMessageTemplate;

@@ -24,4 +24,4 @@ export const changePictureTemplate: string = `
     </div>
 
 </div>
-`
+`;

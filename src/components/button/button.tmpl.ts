@@ -6,6 +6,6 @@ const buttonTemplate: string = `
         {{/if}}>
         {{text}}
         </button>
-`
+`;
 
 export default buttonTemplate;

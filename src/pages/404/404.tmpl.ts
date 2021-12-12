@@ -18,4 +18,4 @@ export const notFoundTemplate: string = `
         </div>
     </div>
 </div>
-`
+`;

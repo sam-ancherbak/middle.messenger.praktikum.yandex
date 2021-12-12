@@ -5,6 +5,6 @@ const inputTemplate: string = `
      name="{{name}}"
      placeholder="{{placeholder}}"
      >
-`
+`;
 
 export default inputTemplate;

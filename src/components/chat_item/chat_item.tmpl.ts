@@ -14,6 +14,6 @@ const chatItemTemplate: string = `
              <div class="chat-item__message-counter"><span>{{counter}}</span></div>
         </div>
     </div>
-`
+`;
 
 export default chatItemTemplate;

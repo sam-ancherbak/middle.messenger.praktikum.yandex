@@ -1,5 +1,5 @@
-import Block from "../../modules/block";
-import chatMessageTempalte from "./chat_message.tmpl";
+import Block from '../../modules/block';
+import chatMessageTempalte from './chat_message.tmpl';
 import './chat_message.css';
 
 interface chatMessageProps {
@@ -9,7 +9,7 @@ interface chatMessageProps {
 }
 
 export default class ChatMessage extends Block {
-    constructor(props: chatMessageProps) {
-        super(chatMessageTempalte, props);
-    }
+  constructor(props: chatMessageProps) {
+    super(chatMessageTempalte, props);
+  }
 }

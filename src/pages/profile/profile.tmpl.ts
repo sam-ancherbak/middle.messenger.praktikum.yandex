@@ -48,4 +48,4 @@ export const profileTemplate: string = `
     </div>
 
 </div>
-`
+`;

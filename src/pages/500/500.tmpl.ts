@@ -19,5 +19,4 @@ export const internalErrorTemplate: string = `
         </div>
     </div>
 </div>
-`
-
+`;

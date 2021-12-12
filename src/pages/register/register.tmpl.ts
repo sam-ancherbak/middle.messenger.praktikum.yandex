@@ -39,4 +39,4 @@ export const registerTemplate = `
         </div>
     </div>
 </div>
-`
+`;

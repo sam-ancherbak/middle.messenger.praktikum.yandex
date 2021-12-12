@@ -20,4 +20,4 @@ export const loginTemplate: string = `
         </div>
     </div>
 </div>
-`
+`;

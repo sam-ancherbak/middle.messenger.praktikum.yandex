@@ -1,5 +1,5 @@
-import buttonTemplate from "./input.tmpl";
-import Block from "../../modules/block";
+import buttonTemplate from './input.tmpl';
+import Block from '../../modules/block';
 import './input.css';
 
 interface InputProps {
@@ -9,7 +9,7 @@ interface InputProps {
     placeholder: string;
 }
 export default class Input extends Block {
-    constructor(props: InputProps) {
-        super(buttonTemplate, props);
-    }
+  constructor(props: InputProps) {
+    super(buttonTemplate, props);
+  }
 }

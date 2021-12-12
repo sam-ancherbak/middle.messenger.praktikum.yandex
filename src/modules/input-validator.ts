@@ -8,50 +8,50 @@ const displayName = /[А-ЯЁа-яё]{1,30}|[A-Za-z]{1,30}$/;
 const inputErrorClass = 'form_input_error';
 
 export function valdiateInput(element) {
-    let inputName: string = element.name;
-    let rule: RegExp | null = null;
-    switch (inputName) {
-        case 'email':
-            rule = emailRule;
-            break
-        case 'phone':
-            rule = phoneRule;
-            break
-        case 'login':
-            rule = loginRule;
-            break
-        case 'password':
-        case 'repeat_password':
-            rule = passwordRule;
-            break
-        case 'first_name':
-        case 'second_name':
-            rule = name;
-            break
-        case 'display_name':
-            rule = displayName;
-            break;
-    }
-    if (rule && !rule.test(element.value)) {
-        element.classList.add(inputErrorClass);
-    } else {
-        element.classList.remove(inputErrorClass);
-    }
+  const inputName: string = element.name;
+  let rule: RegExp | null = null;
+  switch (inputName) {
+    case 'email':
+      rule = emailRule;
+      break;
+    case 'phone':
+      rule = phoneRule;
+      break;
+    case 'login':
+      rule = loginRule;
+      break;
+    case 'password':
+    case 'repeat_password':
+      rule = passwordRule;
+      break;
+    case 'first_name':
+    case 'second_name':
+      rule = name;
+      break;
+    case 'display_name':
+      rule = displayName;
+      break;
+  }
+  if (rule && !rule.test(element.value)) {
+    element.classList.add(inputErrorClass);
+  } else {
+    element.classList.remove(inputErrorClass);
+  }
 }
 
 export function focusOutValidation(event: Event) {
-    const element = event.target as HTMLElement;
-    if (element && element.tagName !== 'INPUT') {
-        return;
-    }
-    valdiateInput(element);
+  const element = event.target as HTMLElement;
+  if (element && element.tagName !== 'INPUT') {
+    return;
+  }
+  valdiateInput(element);
 }
 
 export function submitEventValidation(event: Event) {
-    event.preventDefault();
-    const target = event.target as HTMLElement;
-    const inputs: HTMLCollectionOf<HTMLInputElement> = target.getElementsByTagName('input');
-    Object.values(inputs).forEach(input => {
-        valdiateInput(input)
-    });
+  event.preventDefault();
+  const target = event.target as HTMLElement;
+  const inputs: HTMLCollectionOf<HTMLInputElement> = target.getElementsByTagName('input');
+  Object.values(inputs).forEach((input) => {
+    valdiateInput(input);
+  });
 }
