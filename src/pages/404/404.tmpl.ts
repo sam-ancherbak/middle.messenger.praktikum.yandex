@@ -1,4 +1,4 @@
-export const notFoundPage = `
+export const notFoundTemplate: string = `
 <div id="root">
     <div class="content-container">
         <div class="centered-container">
@@ -18,4 +18,4 @@ export const notFoundPage = `
         </div>
     </div>
 </div>
-`
+`;

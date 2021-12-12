@@ -1,83 +1,53 @@
 .form {
-    .form_header {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-        font-size: 24px;
-        font-weight: 500;
-    }
-
-    .form_element-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-        position: relative;
-
-        .form_input {
-            width: 334px;
-            height: 50px;
-            font-weight: 300;
-            font-size: 14px;
-            border: 1px solid $grey_color;
-            border-radius: 5px;
-            padding: 12px 16px;
-        }
-
-        .form_input-icon {
-            position: absolute;
-            right: 14px;
-        }
-
-        .form_button {
-            width: 334px;
-            height: 50px;
-            margin-top: 20px;
-            background: $red_color;
-            border: 1px solid $grey_color;
-            border-radius: 5px;
-            font-size: 14px;
-            color: $white_color;
-            font-weight: bold;
-        }
-
-        .form_button_disabled {
-            background: $light_red_color;
-        }
-
-        .form_link {
-            margin-top: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            color: #D96161;
-        }
-
-        .form_link_black {
-            color: $black_color;
-        }
-    }
-
-    .form_profile-picture {
-        z-index: 1;
-        background: white;
-        width: 150px;
-        height: 150px;
-        border: 1px solid $grey_color;
-        border-radius: 50%;
-
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
-.side-menu {
-    width: 55px;
-    height: 100vh;
+  .form_header {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #FFF2F2;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .form_element-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+
+    .form_link {
+      margin-top: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      color: #d96161;
+    }
+
+    .form_link_black {
+      color: $black_color;
+    }
+  }
+
+  .form_profile-picture {
+    z-index: 1;
+    background: white;
+    width: 150px;
+    height: 150px;
+    border: 1px solid $grey_color;
+    border-radius: 50%;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.side-menu {
+  width: 55px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff2f2;
 }

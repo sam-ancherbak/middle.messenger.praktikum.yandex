@@ -1,4 +1,4 @@
-export const changePasswordTemplate = `
+export const changePasswordTemplate: string = `
 <div id="root">
     <div class="content-container">
         <div class="side-menu">
@@ -10,15 +10,15 @@ export const changePasswordTemplate = `
             <div class="form">
                 <form action="/" method="post">
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="password" name="oldPassword" placeholder="Введите текущий пароль">
+                        {{{passwordInput}}}
                         <img class="form_input-icon" src="{{eyeIcon}}"/>
                     </div>
                     <div class="form_element-wrapper">
-                        <input class="form_input" type="password" name="newPassword" placeholder="Введите новый пароль">
+                        {{{repeatPasswordInput}}}
                         <img class="form_input-icon" src="{{eyeIcon}}"/>
                     </div>
                     <div class="form_element-wrapper">
-                        <button class="form_button form_button_disabled" type="submit">Сохранить новый пароль</button>
+                        {{{saveButton}}}
                     </div>
                 </form>
 
@@ -28,4 +28,4 @@ export const changePasswordTemplate = `
 
 </div>
 
-`
+`;

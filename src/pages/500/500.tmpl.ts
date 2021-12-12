@@ -1,14 +1,15 @@
-export const chatsTemplate = `
+export const internalErrorTemplate: string = `
 <div id="root">
     <div class="content-container">
         <div class="centered-container">
             <div class="error-page_container">
                 <div class="error-page_code">
-                    <span>Чаты</span>
+                    <span>500</span>
                 </div>
                 <div class="error-page_text">
                     <span>
-                        Страница еще не готова
+                        Внутренняя ошибка сервера<br>
+                        Пожалуйста, подождите, уже работаем над этим
                     </span>
                 </div>
                 <div class="error-page_img">
@@ -18,4 +19,4 @@ export const chatsTemplate = `
         </div>
     </div>
 </div>
-`
+`;
