@@ -17,13 +17,13 @@ class ChangePassword extends Block {
       passwordInput: new Input({
         class: 'form_input',
         type: 'password',
-        name: 'oldPassword',
+        name: 'password',
         placeholder: 'Введите текущий пароль',
       }),
       repeatPasswordInput: new Input({
         class: 'form_input',
         type: 'password',
-        name: 'newPassword',
+        name: 'repeat_password',
         placeholder: 'Введите новый пароль',
       }),
       saveButton: new Button({
